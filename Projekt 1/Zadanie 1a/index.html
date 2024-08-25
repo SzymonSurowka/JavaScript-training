@@ -10,6 +10,7 @@
 
 <body>
     <button>Utwórz element</button>
+
     <script>
         const btn = document.querySelector("button");
         let number = 1;
@@ -20,20 +21,18 @@
             const div = document.createElement("div");
             div.textContent = number;
 
-            // if (number % 5 == 0) {
-            //     div.classList.add("circle");
-            // } // 1 sposób
-
             if (activeNumber == 5) {
                 activeNumber = 0;
                 div.classList.add("circle");
             }
 
             document.body.appendChild(div)
-            number++; // number = number + 10; 
+            number++;
             activeNumber++;
         }
+
         btn.addEventListener("click", addElement)
+
     </script>
 </body>
 
